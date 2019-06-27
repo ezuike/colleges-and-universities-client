@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Demo</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width"/>
+    <base href="/"/>
+</head>
+<body>
+
+<h1>我是一个页面</h1>
+
+<div th:unless="${session.name}">
+    <a href="/login">登录</a>
+</div>
+<div th:if="${session.name}">
+    Welcome userId: <span th:text="${session.name}"></span>
+    <a href="/logout">登出</a>
+</div>
+
+</body>
+</html>
